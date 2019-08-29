@@ -35,9 +35,16 @@ export default class Main extends Component {
         }
     
     loadProducts = async (user) => {
-        const response = await api(user);
-        console.log(response.data);
-        this.setState({products: response.data});
+       
+        try {
+            const response = await api(user);
+            console.log(response.data);
+            this.setState({products: response.data});
+        } catch (error) {
+            console.warn(error);
+        }
+       
+       
     }
     
     render() {
