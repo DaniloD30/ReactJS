@@ -5,12 +5,43 @@
     padding: 0 20px;
 }
 h1#qtd_repos{
-    background: #fff;
+    background: #da55da;
     font-size: 16px;
+    color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
+    margin-top: 10px;
+}
+input#input1 {
+  width: 100%;
+  height: 56px;
+  position: relative;
+  padding: 0px 16px;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Gotham SSm A', 'Gotham SSm B', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  background-color: transparent;
+  color: #282828;
+  outline: none;
+  box-shadow: 0px 4px 20px 0px transparent;
+  transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out, 0.1s padding ease-in-out;
+  -webkit-appearance: none;
+}
+
+input#input2 {
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    background: #da55da;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+
 }
 
 .product-list article {
@@ -31,12 +62,21 @@ h1#qtd_repos{
 .product-list article a{
     height: 42px;
     border-radius: 5px;
-    border: 2px solid #da552f;
+    border: 2px solid #da55da;
     background: nome;
     margin-top: 10px;
     margin-left: 10px;
-    color: #da552f;
+    color: #da55da;
     font-weight: bold;
     font-size: 16px;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0,2s;
+}
+
+.product-list article a:hover {
+    background: #da55da;
+    color: #fff;
 }

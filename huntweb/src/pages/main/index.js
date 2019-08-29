@@ -31,7 +31,7 @@ export default class Main extends Component {
         // Sempre que o elemento for rendereizado
         // faça algo
             //  this.loadProducts(user);
-            
+
         }
     
     loadProducts = async (user) => {
@@ -44,19 +44,20 @@ export default class Main extends Component {
         // return <h1 id="qtd_repos">Quantidade de repositórios: {this.state.products.length}</h1>
         return (
           <div className="product-list">
-                  <h1 id="qtd_repos">Quantidade de repositórios: {this.state.products.length}</h1>
+                  
                   <form onSubmit={this.handleSubmit}>
                      <label>
-                      User GitHub:
-                     <input type="text" value={this.state.value} onChange={this.handleChange} />
+                      <input id="input1" type="text" value={this.state.value} onChange={this.handleChange} placeholder={"User GitHub"} />
                      </label>
-                      <input type="submit" value="Enviar" />
+                      <input id="input2" type="submit" value="Enviar" />
                  </form>
+                 <h1 id="qtd_repos">Quantidade de repositórios: {this.state.products.length}</h1>
                 { this.state.products.map(product => (
                     <article key={product.id}>
                     <strong id="name" >{product.name}</strong>
                     {/* <p>Quantidade de repositórios: {this.state.products.length}</p> */}
-                    <a href="">Acessar</a>
+                    <a href={'https://github.com/'+ this.state.value + '/'+ product.name}>Acessar Repositório</a>
+                    {/* <a href={'/posts/' + post.id}>Acessar Repositório</a> */}
                 </article>
                 ))}
             </div>

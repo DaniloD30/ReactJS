@@ -49,8 +49,7 @@ import axios from 'axios';
             `https://api.github.com/users/${user}/repos`);
             console.log(response);
             return response;
-
-     } catch (error) {
+       } catch (error) {
         console.log('Usuário não existe');
      }
 }
